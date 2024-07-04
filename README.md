@@ -1,34 +1,33 @@
 # Integrating Frontend with a Smart Contract
 
-
 This project is part of the **Metacrafters ETH+AVAX Proof** course.
 
-In this project, we had to integrate Frontend with a Smart Contract
+This program demonstarte how we can integrate our smart contract to a frontend step by step.
 
-To get the project dependencies, run this command in the project root folder
+## Description
+In this project i have created a frontend application which will run on a local hardhat block chain and will connect to my dummy accounts here i have some quick diposit and quick withdraw button and a custom text field where user can diposit and withdraw token as their desired amount above all maxlimit in my contract has been set to 100 token so user cann't transact above it.
 
-```
-npm i
-```
+## Steps to run this Project
+Firstly, clone this github project, then follow the below steps to run this on your VS CODE.
+ ### 1. Inside the project directory, in the terminal type: *npm i*
+ This is help you to get the project dependencies.
+ 
+ ### 2. Open two additional terminals in your VS code
+ 
+ ### 3. In the second terminal type: *npx hardhat node*
+  This allows you to create a local blockchain with demo accounts, where we can deploy our smart contract, and interact with it.
+ 
+ ### 4. In the third terminal, type: *npx hardhat run --network localhost scripts/deploy.js*
+  Using this command, we can deploy our smart contract. The deploy script compiles the smart contract and passes the initial value to the constructor, and deploys 
+  the contract to the blockchain
+  
+  ### 5. Back in the first terminal, type:  *npm run dev*
+  This will help you to launch frontend of the project.
 
-### The project consists of three parts
+  After this, the project will be running on your localhost. Typically at http://localhost:3000/
 
-1. **Hardhat local blockchain**: Hardhat allows us to create a local blockchain with demo accounts, where we can deploy our smart contract, and interact with it.
 
-To initialize a local blockchain environment:
 
-```
-npx hardhat node
-```
+## Author
 
-We have to add this local network to our **Metamask Wallet** in order to access it.
-
-2. **Smart Contract Deployment**: Once the blockchain environment is live, we can deploy our smart contract using a deploy script. The deploy script compiles the smart contract and passes the initial value to the constructor, and deploys the contract to the blockchain. We can get address of the smart contract by using the reference variable assigned while loading the contract.
-
-To deploy the contract
-
-```
-npx hardhat run --network localhost scripts/deploy.js
-```
-
-3. **Frontend**: Frontend has been made using Next.js. The frontend helps us connect with the **Metamask wallet**. After establishing the connection, we can see the **Deposit** and **Withdraw** interface. Just enter the desired amount in the textbox and click **Deposit** or **Withdraw**, it will redirect you to Metamask wallet for confirmation, after verifying the transaction, the amount will be transferred and the balance will be updated in the frontend.
+Kirtan Nahar
