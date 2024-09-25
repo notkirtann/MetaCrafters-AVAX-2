@@ -74,7 +74,7 @@ GitHub Issues: Report issues or suggest enhancements on our GitHub Issues page.
 #### Community  
 Join the community to discuss the project and get help from other user:
 LinekdIn: [@KirtanNahar](https://www.linkedin.com/in/notkirtann/)     
-I hope this information helps you get the most out of our Blockchain Message Manager Smart Contract project. If you have any feedback or suggestions, please let us know!
+I hope this information helps you get the most out of our Cold Play Concert Ticket Purchase DApp project. If you have any feedback or suggestions, please let us know!
 
 ## Authors
 
