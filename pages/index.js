@@ -196,127 +196,146 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header>
-        <h1> Cold-Play Concert Ticket Purchase</h1>
-      </header>
-      {initUser()}
-      <style jsx>{`
-  body {
-    background-color: #0e0e0e;
-    color: #fff;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url('https://wallpaperaccess.com/full/4167965.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  .container {
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    margin: 60px auto;
-    width: 90%;
-    max-width: 1200px;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  }
-  header h1 {
-    font-size: 3em;
-    margin-bottom: 40px;
-    color: #f1c40f;
-    font-weight: bold;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
-    font-family: 'Poppins', sans-serif;
-  }
-  .atm {
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent with slight white tint */
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  }
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-  .balance-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  .balance-block {
-    display: flex;
-    align-items: center;
-    background: #1e1e1e;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 30px;
-  }
-  .balance-icon {
-    font-size: 2.5em;
-    color: #e67e22;
-    margin-right: 20px;
-  }
-  .balance-details {
-    color: #fff;
-  }
-  .balance-title {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #f1c40f;
-  }
-  .balance-info {
-    font-size: 1.3em;
-    color: #ecf0f1;
-  }
-  .transaction-title {
-    font-size: 1.8em;
-    margin-bottom: 25px;
-    font-weight: bold;
-    color: #f39c12;
-  }
-  .amount-form {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  .amount-form input {
-    padding: 12px;
-    border-radius: 10px;
-    border: 2px solid #3498db;
-    font-size: 1.2em;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-  }
-  .purchase-button,
-  .withdraw-button,
-  .connect-button {
-    padding: 15px 35px;
-    background-color: #9b59b6;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  }
-  .purchase-button:hover {
-    background-color: #8e44ad;
-  }
-  .withdraw-button:hover,
-  .connect-button:hover {
-    background-color: #2980b9;
-  }
-`}</style>
+  <header>
+    <h1>Cold-Play Concert Ticket Purchase</h1>
+  </header>
+  {initUser()}
+  <style jsx>{`
+    body {
+      background-color: #fff;
+      color: #fff;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-size: full;
+    }
+    .container {
+      color : #3498db;
+      text-align: center;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      margin: 70px auto;
+      width: 90%;
+      max-width: 1100px;
+      background: rgba(0, 0, 0, 10); /* Slightly darker transparent background */
+      border: 3px solid #3498db;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+      color: #3498db;
+      font-weight: bold;
+      text-shadow: 0 6px 8px rgba(255, 200, 20, 0.8);
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .atm {
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.15); /* White tint but more transparent */
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+    .balance-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .balance-block {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(145deg, #3498db, #2980b9);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+      width: 95%;
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+    .balance-icon {
+      font-size: 2.8em;
+      color: #f1c40f;
+      margin-right: 25px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+    .balance-details {
+      color: #fff;
+    }
+    .balance-title {
+      font-size: 1.6em;
+      margin-bottom: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ecf0f1;
+    }
+    .balance-info {
+      font-size: 1.4em;
+      color: #ecf0f1;
+    }
+    .transaction-title {
+      font-size: 2em;
+      margin-bottom: 25px;
+      font-weight: bold;
+      color: #48c9b0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .amount-form {
+      margin: 25px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .amount-form input {
+      padding: 12px;
+      margin-left : 2px;
+      border-radius: 10px;
+      border: 3px solid #48c9b0;
+      font-size: 1.2em;
+      background-color: #1c2833;
+      color: #fff;
+      transition: border-color 0.3s ease;
+    }
+    .amount-form input:focus {
+      border-color: orange;
+    }
+    .purchase-button,
+    .withdraw-button,
+    .connect-button {
+      padding: 18px 40px;
+      background: linear-gradient(145deg, #5dade2, #2980b9);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.4em;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .purchase-button:hover,
+    .withdraw-button:hover,
+    .connect-button:hover {
+      background: #3498db;
+      transform: scale(1.05);
+    }
+    .purchase-button:active,
+    .withdraw-button:active,
+    .connect-button:active {
+      transform: scale(0.98);
+    }
+  `}</style>
+</main>
 
-    </main>
+
+  
   );
 }
