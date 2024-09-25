@@ -13,8 +13,8 @@ contract Assessment {
     event TicketsWithdrawn(address indexed user, uint256 amount);
 
     // Ticket prices
-    uint256 public constant singleTicketPrice = 5 ether;
-    uint256 public constant bulkTicketPrice = 3 ether;
+    uint256 public constant singleTicketPrice = 3 ether;
+    uint256 public constant bulkTicketPrice = 2 ether;
 
     // Modifier to check if the caller has enough tickets
     modifier hasEnoughTickets(uint256 _amount) {
@@ -37,7 +37,7 @@ contract Assessment {
         require(_amount > 0, "Must purchase at least 1 ticket");
 
         uint256 totalCost;
-        if (_amount == 1 || _amount == 2) {
+        if (_amount == 1) {
             totalCost = singleTicketPrice;
         } else {
             totalCost = bulkTicketPrice * _amount;
